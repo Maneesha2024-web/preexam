@@ -1,0 +1,36 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #aaa;
+  background-size: 340px, auto;
+  margin: 50px;
+}
+/* Each item in the grid contains numbers */
+.item {
+  /* Center the contents of the grid items. Make each grid item a Flex
+    Container */
+  display: flex;
+  /* Horizontal and Vertical centering */
+  justify-content: center;
+  align-items: center;
+  border: 5px solid lightgoldenrodyellow;
+  border-radius: 3px;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+.container {
+  display: grid;
+  /* relative sizes */
+  /* fr stands for fraction of available space */
+  grid-template-columns: 1fr 1fr;
+ /* try the following 15% is the percentage of container but fr means available space */
+  /* grid-template-columns: 2fr 1fr 150px 15%; */
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 20px;
+  grid-auto-flow: column;
+}

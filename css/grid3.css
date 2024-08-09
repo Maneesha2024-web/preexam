@@ -1,0 +1,39 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #aaa;
+  background-size: 340px, auto;
+  margin: 50px;
+}
+
+/* Each item in the grid contains numbers */
+.item {
+  /* Center the contents of the grid items. Make each grid item a Flex
+    Container */
+  display: flex;
+  /* Horizontal and Vertical centering */
+  justify-content: center;
+  align-items: center;
+  border: 5px solid lightgoldenrodyellow;
+  border-radius: 3px;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: lightgrey;
+}
+
+.container {
+  display: grid;
+  /* implicit grid */
+  grid-template-columns: 100px 100px 100px ;
+  /* explicit grid */
+  grid-template-rows: 60px 120px;
+  grid-gap: 20px;
+  grid-auto-flow: column;
+
+  /* also you can control the column size */
+  grid-auto-columns: 200px;
+}

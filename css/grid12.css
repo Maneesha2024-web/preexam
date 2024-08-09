@@ -1,0 +1,66 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%; /* making the grid to fit the whole page*/
+}
+
+body {
+  background-color: #aaa;
+  margin: 0px 50px 50px;
+  height: 100%;
+}
+/* Each item in the grid contains numbers */
+.item {
+  /* Center the contents of the grid items. Making each grid item a Flex
+  Container */
+  display: flex;
+  /* Horizontal and Vertical centering */
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #87b5ff;
+  border-radius: 3px;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #1c57b5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [start sidebar-start] 3fr [sidebar-end content-start]
+    5fr [content-end ads-start] 3fr [end ads-end];
+  grid-template-rows:
+    [start header-start] 4.5rem [header-end content-start]
+    auto [content-end footer-start] 4.5rem [end footer-end];
+  grid-column-gap: 1px;
+  height: 100%;
+}
+.header {
+  grid-column: start / end;
+  grid-row: start / header-end;
+  background-color: cadetblue;
+}
+.articles {
+  grid-column: start / sidebar-end;
+  grid-row: header-end / footer-start;
+  background-color: greenyellow;
+}
+.content {
+  grid-column: content-start / content-end;
+  grid-row: content-start / content-end;
+  background-color: yellow;
+}
+.footer {
+  grid-column: start / end;
+  grid-row: footer-start / footer-end;
+  background-color: orange;
+}
+.ads {
+  grid-column: ads-start / end;
+  grid-row: header-end / footer-start;
+  background-color: pink;
+}
